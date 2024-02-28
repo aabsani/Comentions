@@ -1,0 +1,157 @@
+:root {
+  --color-primary: #6741d9;
+  --color-primary-light: #7950f2;
+
+  --color-text-dark: #adb5bd;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: var(--color-text-dark);
+  background-color: #e6fcf5;
+  font-family: "Montserrat", sans-serif;
+  padding: 3.2rem;
+  margin: auto;
+  width: 60%;
+}
+
+.comments-box {
+  display: flex;
+  gap: 2rem;
+}
+
+.comments-list {
+}
+
+.replies-list {
+  margin-left: 4rem;
+}
+
+div .reply-input {
+  background-color: #ffff;
+  border-radius: 20px;
+  border: 1px solid;
+  padding: 1.5rem;
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: 0.2fr 1.5fr 0.3fr;
+  /* transition: all 5s; */
+}
+
+.reply-input img {
+}
+
+li .comment-items {
+  display: flex;
+}
+
+li .header {
+  display: grid;
+  gap: 1.5rem;
+  grid-template-columns: 0.3fr 1fr 1.5fr 3fr;
+  justify-items: end;
+  align-items: center;
+  padding: 0 1.5rem;
+}
+
+li .rating {
+  background-color: #e9ecef;
+  color: var(--color-primary-light);
+  padding: 0.3rem;
+  border-radius: 10px;
+  text-align: center;
+}
+
+li .score {
+  font-size: 17px;
+  padding: 0.5rem 0.3rem;
+}
+
+li .username {
+  color: black;
+  font-weight: bolder;
+  font-size: 15px;
+}
+
+ul {
+  list-style: none;
+}
+
+li {
+  background-color: #ffff;
+  border-radius: 20px;
+  border: 1px solid;
+  padding: 1.5rem;
+  margin: 1rem 0;
+}
+
+button {
+  border: none;
+}
+
+textarea {
+  border: 1px solid;
+  border-radius: 20px;
+  padding: 0.5rem 2rem 4rem 1rem;
+  width: 90%;
+}
+
+.profileimg {
+  width: 3rem;
+  height: 3rem;
+}
+
+.content {
+  color: #868e96;
+  margin-top: 1.5rem;
+  padding-left: 2rem;
+}
+
+.btn {
+  color: var(--color-primary);
+  background: none;
+  cursor: pointer;
+  padding: 0.2rem;
+}
+
+.btn-rate {
+  cursor: pointer;
+}
+
+.btn-send {
+  background-color: var(--color-primary-light);
+  border-radius: 15px;
+  color: #ffff;
+  font-size: 0.9rem;
+  height: 3rem;
+  text-transform: uppercase;
+}
+
+.btn-edit {
+  padding: 0.7rem;
+}
+
+.btn-edit-container {
+  display: flex;
+  justify-content: right;
+  gap: 1rem;
+  width: 90%;
+}
+
+.btn-edit:hover {
+  background-color: #e6fcf5;
+  color: black;
+}
+
+.user-indicator {
+  background-color: #1c7ed6;
+  border-radius: 7px;
+  color: #ffff;
+  padding: 0.2rem;
+  margin-left: 1rem;
+}
