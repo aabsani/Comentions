@@ -155,3 +155,64 @@ textarea {
   padding: 0.2rem;
   margin-left: 1rem;
 }
+
+.modal {
+  background-color: hsla(216, 2%, 53%, 0.411);
+  display: grid;
+  place-content: center;
+  position: fixed;
+  z-index: 999;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  overflow: hidden;
+  padding: 1rem;
+  min-width: 100vw;
+  min-height: 100vh;
+}
+
+.modal-card {
+  max-width: 500px;
+  background-color: #ffff;
+  padding: 2rem;
+  border-radius: 10px;
+}
+
+.modal-title {
+  color: black;
+  font-weight: 800;
+  font-size: 1.7rem;
+}
+
+.modal-content {
+  font-size: 18px;
+  padding: 1.5rem 0;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 3rem;
+}
+
+.modalbtn {
+  border-radius: 10px;
+  background: none;
+  color: #ffff;
+  padding: 1rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 400ms ease-in-out;
+
+  &:hover {
+    background-color: var(--color-primary-light);
+  }
+}
+
+.confirm {
+  background-color: crimson;
+}
+
+.cancel {
+  background-color: #868e96;
+}
