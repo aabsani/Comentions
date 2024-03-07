@@ -1,6 +1,7 @@
 /* eslint-disable react/prop-types */
 import { useState } from "react";
 import Edit from "./Edit";
+import Modal from "./Modal";
 
 function CommentsItem({
   comment,
@@ -10,6 +11,7 @@ function CommentsItem({
   onDelete,
 }) {
   const [isEditing, setIsEditing] = useState(false);
+  const [showModal, setShowModal] = useState(false);
 
   const {
     createdAt,
@@ -35,9 +37,8 @@ function CommentsItem({
     toggleEdit();
   }
 
-  function handleDelete() {
-    // isComment is true inside the <Comment /> and false inside <RepliesList />
-    onDelete(comment.id, isComment);
+  function toggleModal() {
+    setShowModal(!showModal);
   }
 
   return (
@@ -80,7 +81,10 @@ function CommentsItem({
             {username === "juliusomo" ? (
               <>
                 <img src="./images/icon-delete.svg" alt="delete-icon" />
-                <button className="btn" onClick={handleDelete}>
+                {/* <button className="btn" onClick={handleDelete}>
+                  Delete
+                </button> */}
+                <button className="btn" onClick={toggleModal}>
                   Delete
                 </button>
                 <img src="./images/icon-edit.svg" alt="edit-icon" />
@@ -112,6 +116,14 @@ function CommentsItem({
           content
         )}
       </div>
+      {showModal && (
+        <Modal
+          onDelete={onDelete}
+          toggleModal={toggleModal}
+          commentId={comment.id}
+          isComment={isComment}
+        />
+      )}
     </li>
   );
 }
