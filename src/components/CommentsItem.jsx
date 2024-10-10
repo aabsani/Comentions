@@ -49,7 +49,7 @@ function CommentsItem({
             className="btn-rate upvote"
             onClick={() => setScoreRating(scoreRating + 1)}
           >
-            <img src="../images/icon-plus.svg" alt="plus" />
+            <img src="../../images/icon-plus.svg" alt="plus" />
           </button>
           <strong>
             <p className="score">{scoreRating}</p>
