@@ -1,5 +1,6 @@
 /* eslint-disable react/prop-types */
 import { useState, useEffect } from "react";
+import data from "../../data/data.json";
 
 function Reply({
   btnText = "Send",
@@ -14,11 +15,6 @@ function Reply({
   const [content, setContent] = useState("");
 
   const isValidComment = content.length > 3;
-
-  // console.log("this is the parent reply id: ", parentReplyId);
-  // console.log("this is the parent comment id: ", parentCommentId);
-
-  const BASE_URL = "http://localhost:8000";
 
   const id = crypto.randomUUID();
   const createdAt = new Date().toLocaleDateString();
@@ -54,17 +50,7 @@ function Reply({
   }
 
   useEffect(function () {
-    async function fetchComments() {
-      try {
-        const res = await fetch(`${BASE_URL}/currentUser`);
-        const data = await res.json();
-        setUserComments(data);
-      } catch (error) {
-        alert("There was an error fetching the data");
-        console.error(error);
-      }
-    }
-    fetchComments();
+    setUserComments(data.currentUser);
   }, []);
 
   const png = userComment ? userComment.image.png : null;
