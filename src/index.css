@@ -219,6 +219,8 @@ textarea {
 
 @media (max-width: 768px) {
   div .reply-input {
-    grid-template-columns: 1fr 1fr 1fr;
+    /* grid-template-columns: 1fr 1fr 1fr; */
+    display: flex;
+    flex-direction: column;
   }
 }
