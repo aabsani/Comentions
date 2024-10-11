@@ -216,3 +216,9 @@ textarea {
 .cancel {
   background-color: #868e96;
 }
+
+@media (max-width: 768px) {
+  .reply-input {
+    flex-direction: column;
+    align-items: flex-start;
+  }
