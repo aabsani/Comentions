@@ -219,6 +219,7 @@ textarea {
 
 @media (max-width: 768px) {
   .reply-input {
+    display: flex;
     flex-direction: column;
     align-items: flex-start;
   }
