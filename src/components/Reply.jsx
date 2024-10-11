@@ -66,13 +66,13 @@ function Reply({
         rows="3"
         cols="20"
       ></textarea>
-      {/* <button
+      <button
         disabled={!isValidComment}
         className="btn btn-send"
         onClick={handleAdd}
       >
         {btnText}
-      </button> */}
+      </button>
     </div>
   );
 }
